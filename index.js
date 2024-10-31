@@ -78,9 +78,7 @@ app.get(
     });
 
     if (limit) log = log.slice(0, +limit);
-    const resp = { ...user, count: log.length, log };
-    console.log(resp);
-    res.json(resp);
+    res.json({ ...user, count: log.length, log });
   },
 );
 
